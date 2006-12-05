@@ -3,12 +3,12 @@
 #
 # Term::Readline interface to SQL::Shell
 #
-# $Id: sqlsh,v 1.48 2006/08/04 09:28:30 johna Exp $
+# $Id: sqlsh,v 1.50 2006/12/05 11:38:47 andreww Exp $
 #
 
 use strict;
 use vars qw($VERSION);
-$VERSION = ('$Revision: 1.48 $' =~ /([\d\.]+)/)[0];
+$VERSION = ('$Revision: 1.50 $' =~ /([\d\.]+)/)[0];
 
 use constant HISTORY_FILE => '~/.sqlsh_history';
 
@@ -89,7 +89,7 @@ else
 		qr/^help|\?$/ => \&_help,
 		qr/^reload$/ => \&_reload,
 		qr/^(cat|more|less) (.+)/ => \&_display_file,
-		qr/^(?:exit|quit|bye)|\w+ off$/i => sub {
+		qr/^(?:exit|quit|bye|\w+\s+off)$/i => sub {
 			my $sqlsh = shift;
 			$sqlsh->disconnect();
 			$quit = 1;		
@@ -274,7 +274,7 @@ variable. Any .inputrc C<editing-mode> declaration still takes precedence.
 
 =head1 VERSION
 
-$Revision: 1.48 $ on $Date: 2006/08/04 09:28:30 $ by $Author: johna $
+$Revision: 1.50 $ on $Date: 2006/12/05 11:38:47 $ by $Author: andreww $
 
 =head1 AUTHOR
 

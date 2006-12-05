@@ -2,7 +2,7 @@
 # Purpose : SQL Shell API
 # Author  : John Alden
 # Created : Jul 2006 (refactored from sqlsh.pl)
-# CVS     : $Header: /home/cvs/software/cvsroot/db_utils/lib/SQL/Shell.pm,v 1.13 2006/08/22 08:49:28 johna Exp $
+# CVS     : $Header: /home/cvs/software/cvsroot/db_utils/lib/SQL/Shell.pm,v 1.14 2006/12/05 14:31:33 andreww Exp $
 ###############################################################################
 
 package SQL::Shell;
@@ -16,7 +16,7 @@ use IO::File;
 use URI::Escape;
 
 use vars qw($VERSION);
-$VERSION = ('$Revision: 1.13 $' =~ /([\d\.]+)/)[0];
+$VERSION = ('$Revision: 1.14 $' =~ /([\d\.]+)/)[0];
 
 use constant HISTORY_SIZE => $ENV{HISTSIZE} || $ENV{HISTFILESIZE} || 50;
 use vars qw(%Renderers %Commands %Settings);
@@ -1762,7 +1762,7 @@ The following are also affected by the C<set_param> method or the "set" command:
 	
 =head1 VERSION
 
-$Revision: 1.13 $ on $Date: 2006/08/22 08:49:28 $ by $Author: johna $
+$Revision: 1.14 $ on $Date: 2006/12/05 14:31:33 $ by $Author: andreww $
 
 =head1 AUTHOR
 
