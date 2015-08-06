@@ -72,7 +72,7 @@ $output = execute($sqlsh, "set rubbish on");
 ASSERT(scalar $output =~ /Unknown parameter 'rubbish' for set command/s, "trap invalid param");
 
 #Invalid param values
-for my $param qw(tracing display-mode log-mode escape enter-whitespace width longreadlen longtruncok auto-commit multiline) {
+for my $param (qw(tracing display-mode log-mode escape enter-whitespace width longreadlen longtruncok auto-commit multiline)) {
 	$output = execute($sqlsh, "set $param rubbish");
 	ASSERT(scalar $output =~ /'rubbish' is an invalid value/s, "trap invalid value for $param");
 }
