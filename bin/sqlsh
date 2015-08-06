@@ -97,7 +97,7 @@ else
 	});
 
 	#Load any previous history
-	$sqlsh->load_history(HISTORY_FILE) if(-f HISTORY_FILE);
+	$sqlsh->load_history(HISTORY_FILE) if(-f _expand_filename(HISTORY_FILE));
 	
 	#Command loop
 	local $_;
