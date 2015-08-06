@@ -11,6 +11,7 @@ WriteMakefile(
 				Test::Assertions => 0,
 				Test::Assertions::TestScript => 0,
 				IO::CaptureOutput => 0,
+				IO::Scalar => 0,
                            },
               ABSTRACT_FROM => 'lib/SQL/Shell.pm',
               AUTHOR        => 'British Broadcasting Corporation',
