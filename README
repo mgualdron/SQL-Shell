@@ -1,6 +1,7 @@
-SQL::Shell v1.14
+SQL::Shell v1.15
 
 (c) BBC 2006. This program is free software; you can redistribute it and/or modify it under the GNU GPL.
+Enhancements and bug-fixes (c) 2016 Miguel Gualdron under the GNU GPL.
 
 See the file COPYING in this distribution, or http://www.gnu.org/licenses/gpl.txt 
 
