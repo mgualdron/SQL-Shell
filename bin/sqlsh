@@ -26,6 +26,7 @@ use vars qw(@Arguments);
 my $dsn = $ENV{DBI_DSN};
 my ($username, $password);
 my ($read_from_stdin, $help, $quiet);
+my $autocommit = 0;
 GetOptions(
 	'u:s' => \$username, 
 	'p:s' => \$password, 
@@ -33,6 +34,7 @@ GetOptions(
 	'i' => \$read_from_stdin, 
 	'H' => \$help,
 	'q' => \$quiet, 
+	'A' => \$autocommit, 
 );
 pod2usage(-verbose=>2) if($help);
 welcome() unless($quiet);
@@ -40,6 +42,7 @@ welcome() unless($quiet);
 #Create SQL::Shell
 my $sqlsh = new SQL::Shell({
 	Verbose => 1,
+    AutoCommit => $autocommit,
 });
 
 # Connect to database
@@ -254,6 +257,7 @@ sqlsh will prompt you for a password.  You can pass a blank password with -p if 
 	-p <password>
 	-i - read list of commands from STDIN
 	-q - quiet (no banner)
+	-A - turn AutoCommit ON
 	-H - help
 
 =head1 COMMANDS ADDED BY SQLSH
