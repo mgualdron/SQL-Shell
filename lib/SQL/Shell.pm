@@ -43,7 +43,6 @@ use vars qw(%Renderers %Commands %Settings);
 	qr/^disconnect$/i => \&disconnect,
 	qr/^show +\$dbh +(.*)/i => \&show_dbh,
 	qr/^(list|show) +schema$/i => \&show_schema,
-	#qr/^(list|show) +tables(?: like)?( .*)?$/i => \&show_tables,
 	qr/^(list|show) +tablecounts$/i => \&show_tablecounts,	
 	qr/^(list|show) +(tables|catalogs|schemas|tabletypes)(?: like)?( .*)?$/i => \&show_objects,
 	qr/^(list|show) +charsets$/i => \&show_charsets,	
