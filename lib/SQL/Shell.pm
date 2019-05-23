@@ -16,7 +16,7 @@ use IO::File;
 use URI::Escape;
 
 use vars qw($VERSION);
-$VERSION = ('$Revision: 1.15 $' =~ /([\d\._]+)/)[0];
+$VERSION = ('$Revision: 1.16 $' =~ /([\d\._]+)/)[0];
 
 use constant HISTORY_SIZE => $ENV{HISTSIZE} || $ENV{HISTFILESIZE} || 50;
 use vars qw(%Renderers %Commands %Settings);
