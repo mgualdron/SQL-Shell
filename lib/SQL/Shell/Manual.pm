@@ -406,12 +406,12 @@ database the following command:
 
     set show_deleted_records=TRUE
 
-If you try to do that from C<sqlshell>, it will tell you that the command is 
-not recognized, because C<sqlshell> has a built-in C<set> command, and it is 
+If you try to do that from C<sqlsh>, it will tell you that the command is 
+not recognized, because C<sqlsh> has a built-in C<set> command, and it is 
 trying to match it to what you have typed at the prompt.
 
 The solution is to use the C<send> command to submit the C<set> expression to 
-the DB without having it intercepted by C<sqlshell>:
+the DB without having it intercepted by C<sqlsh>:
 
     send set show_deleted_records=TRUE
 
@@ -426,8 +426,8 @@ or simply
 
     xp_cmdshell 'dir *.exe'
 
-While C<sqlshell> supports the C<execute> command, this is intended to run 
-commands from a local SQL file.  In this case, C<sqlshell> would just reply 
+While C<sqlsh> supports the C<execute> command, this is intended to run 
+commands from a local SQL file.  In this case, C<sqlsh> would just reply 
 that the command is not recognized.  The solution is to use the C<recv> 
 command:
 
@@ -436,7 +436,7 @@ command:
 or
     recv xp_cmdshell 'dir *.exe'
 
-This will make C<sqlshell> submit the exec expression to the DB as if it were 
+This will make C<sqlsh> submit the exec expression to the DB as if it were 
 a C<select> command, so that any output is rendered and displayed.
 
 =head3 Example 3
@@ -447,7 +447,7 @@ disconnecting.  The command looks as follows:
 
     use MY_DB_NAME
 
-If I give this command while in C<sqlshell>, it will not be recognized, 
+If I give this command while in C<sqlsh>, it will not be recognized, 
 however, I could pass it on to the DB by using C<send>:
 
     send use MY_DB_NAME
