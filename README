@@ -55,7 +55,7 @@ RECENT CHANGES
 v1.18
 
 Added use of File::Temp for handling temporary files, specifically to allow 
-running te tests from a read-only location.
+running tests from a read-only location.
 
 
 v1.17
