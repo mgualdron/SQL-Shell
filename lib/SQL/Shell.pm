@@ -1896,7 +1896,7 @@ The following are also affected by the C<set_param> method or the "set" command:
 
 =head1 VERSION
 
-Version 1.17
+Version 1.18
 
 =head1 AUTHOR
 
